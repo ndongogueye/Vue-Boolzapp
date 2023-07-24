@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background: linear-gradient(#009688 0%, #009688 130px, #fff 130px, #fff 100%  );   
+}
+
+
+.container {
+    width: 1298px;
+    background-color: rgb(231, 235, 232);
+    height: calc(100vh - 80px);
+}
