@@ -123,5 +123,49 @@ input {
 
 .destra {
     flex: 30%;
-    background-color: red;
+    background-image: url(../assets/Immagini/mine.jpg);
+    position: relative;
 }
+
+.nav-right {
+    display: flex;
+    justify-content:space-between
+}
+
+.descrizione-destra {
+    display: flex;
+    
+}
+
+.nav-icons-right {
+    margin-top: 1rem;
+}
+
+.accesso {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-right {
+   background-color: white;
+    padding: 0.5em;
+}
+
+.barra-testo {
+    width: 98%;
+    height: 100px;
+    background-color: rgb(243, 239, 239);
+    display:flex ;
+   position: absolute;
+   bottom: 0;
+   padding-left: 1rem ;
+}
+
+.barra-testo div {
+    margin-top: 2rem;
+}
+.barra-testo input {
+    width: 650px;
+    margin-right: 1rem;
+}
+
