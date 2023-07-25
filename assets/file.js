@@ -1,8 +1,9 @@
+
+
 Vue.createApp({
-    data() {
-        return {
-             contatti : [
-                {
+  data() {
+    return {
+      contatti: [    {
                   name: "Michele",
                   avatar: "assets/Immagini/avatar_1.jpg",
                   messages: [
@@ -81,11 +82,16 @@ Vue.createApp({
                       status: "received",
                     },
                   ],
-                },
-              ]
-        }
-    }
-}).mount('#app')
+                },],
+      contattoAttivo: 0, // Inizializza il contatto attivo al primo contatto (indice 0)
+    };
+  },
+  methods: {
+    mostraConversazione(index) {
+      this.contattoAttivo = index; // Imposta l'indice del contatto attivo quando viene cliccato
+    },
+  },
+}).mount('#app');
 
 
 

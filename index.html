@@ -45,7 +45,7 @@
         </div>
         
         <div class="chat-list"> 
-            <div v-for="(contatto, index) in contatti" :key="index" class="block">
+            <div v-for="(contatto, index) in contatti" :key="index" class="block" @click="mostraConversazione(index)" >
               <div class="imgBox">
                 <img class="marco" :src="contatto.avatar" alt="">
               </div>
@@ -83,12 +83,12 @@
 
 
         <div class="conenitore-messaggi">
-           <div class="singoli-messaggi">
-            <div class="messaggi inviati"><p>Oi Bro</p></div>
-           </div>
-           <div class="messaggi ricevuti"><p>Dimmi tutto</p></div>
-        </div>
-        
+            <div v-for="messaggio in contatti[contattoAttivo].messages" :key="messaggio.date" class="singoli-messaggi">
+              <div :class="messaggio.status === 'sent' ? 'messaggi inviati' : 'messaggi ricevuti'">
+                <p>{{ messaggio.message }}</p>
+              </div>
+            </div>
+          </div>
 <div class="barra-testo">
     <div><i class="fa-solid fa-face-smile fa-2xl"></i></div>
     <div class="testo"><input type="text" placeholder="scrivi un messaggio"></div>
