@@ -45,24 +45,17 @@
         </div>
         
         <div class="chat-list"> 
-            <div class="block">
-                <div class="imgBox">
-                    <img class="marco" src="assets/Immagini/avatar_2.jpg" alt="">
-                </div>
-        
-                 <div class="listHead">
-                   <h4> Riccardo Trezza</h4>
-                   <p>Ultimo messaggio inviato</p>
-                   </div>
-                 
-                    <p >12.00</p>
-                
-                  
-                
-                 
-              
+            <div v-for="(contatto, index) in contatti" :key="index" class="block">
+              <div class="imgBox">
+                <img class="marco" :src="contatto.avatar" alt="">
+              </div>
+              <div class="listHead">
+                <h4>{{contatto.name}}</h4>
+                <p>Ultimo messaggio inviato</p>
+              </div>
+              <p class="tempo">12.00</p>
             </div>
-        </div>
+          </div>
 
         </div>
         
@@ -87,6 +80,14 @@
         
                 </div>
         </div>
+
+
+        <div class="conenitore-messaggi">
+           <div class="singoli-messaggi">
+            <div class="messaggi inviati"><p>Oi Bro</p></div>
+           </div>
+           <div class="messaggi ricevuti"><p>Dimmi tutto</p></div>
+        </div>
         
 <div class="barra-testo">
     <div><i class="fa-solid fa-face-smile fa-2xl"></i></div>
@@ -99,6 +100,7 @@
         
            </div>
    </div>
+ 
    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="assets/file.js"></script>
 </body>

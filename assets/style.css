@@ -87,16 +87,30 @@ i {
 .chat-list {
     background-color: white;
     height: 70.3vh;
+    overflow: auto;
+
+}
+
+.imgBox {
+    margin-left: 1em;
+}
+.block {
+    padding-top: 1rem;
 }
 
 .listHead {
-margin-right: 13rem;
+margin-right: 10rem;
 margin-bottom: 1em;
+margin-left: 2rem;
 }
 
 .block {
     display: flex;
     align-items: center ;
+}
+
+.tempo {
+    margin-bottom: 2rem;
 }
 
 .lente {
@@ -151,6 +165,9 @@ input {
     padding: 0.5em;
 }
 
+
+
+
 .barra-testo {
     width: 98%;
     height: 100px;
@@ -169,3 +186,34 @@ input {
     margin-right: 1rem;
 }
 
+.contanitore-messaggi {
+    flex-grow: 1;
+}
+
+.singoli-messaggi {
+    display: flex;
+    flex-direction: column;
+   padding: 1rem;
+   
+}
+
+.messaggi {
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #009688;
+    display: inline-block;
+    min-width: 150px;
+   
+
+}
+
+.inviati {
+
+    align-self: flex-end;
+    
+}
+
+.ricevuti {
+    align-self: flex-start;
+    margin-left: 1rem;
+}
