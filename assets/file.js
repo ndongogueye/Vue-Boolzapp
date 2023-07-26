@@ -83,15 +83,35 @@ Vue.createApp({
                     },
                   ],
                 },],
-      contattoAttivo: 0, // Inizializza il contatto attivo al primo contatto (indice 0)
+      contattoAttivo: 0, 
     };
   },
   methods: {
     mostraConversazione(index) {
-      this.contattoAttivo = index; // Imposta l'indice del contatto attivo quando viene cliccato
+      this.contattoAttivo = index; // 
     },
+
+    inviaMessaggio() {
+      if (this.nuovoMessaggio.trim() === "") return; 
+      const nuovoMessaggio = {
+        date: new Date().toLocaleString(), 
+        message: this.nuovoMessaggio,
+        status: "sent",
+      };
+      this.contatti[this.contattoAttivo].messages.push(nuovoMessaggio);
+      this.nuovoMessaggio = ""; 
+      setTimeout(() => {
+        const risposta = {
+          date: new Date().toLocaleString(), 
+          message: "Ok",
+          status: "received",
+        };
+        this.contatti[this.contattoAttivo].messages.push(risposta);
+      }, 1000); 
+    },
+
+    
   },
 }).mount('#app');
-
 
 

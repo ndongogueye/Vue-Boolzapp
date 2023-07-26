@@ -81,25 +81,27 @@
                 </div>
         </div>
 
-
-        <div class="conenitore-messaggi">
-            <div v-for="messaggio in contatti[contattoAttivo].messages" :key="messaggio.date" class="singoli-messaggi">
-              <div :class="messaggio.status === 'sent' ? 'messaggi inviati' : 'messaggi ricevuti'">
-                <p>{{ messaggio.message }}</p>
-              </div>
+        <div class="contenitore-messaggi">
+          <div v-for="messaggio in contatti[contattoAttivo].messages" :key="messaggio.date" class="singoli-messaggi">
+            <div :class="messaggio.status === 'sent' ? 'messaggi inviati' : 'messaggi ricevuti'">
+              <p>{{ messaggio.message }}</p>
             </div>
           </div>
-<div class="barra-testo">
-    <div><i class="fa-solid fa-face-smile fa-2xl"></i></div>
-    <div class="testo"><input type="text" placeholder="scrivi un messaggio"></div>
-    <div><i class="fa-solid fa-microphone fa-2xl"></i></div>
-</div>
-
-        </div>
-        </div>
-        
-           </div>
-   </div>
+          </div>
+          <div class="barra-testo">
+          <div><i class="fa-solid fa-face-smile fa-2xl"></i></div>
+          <div class="testo">
+            
+            <input type="text" placeholder="scrivi un messaggio" v-model="nuovoMessaggio" @keyup.enter="inviaMessaggio" />
+          </div>
+          <div><i class="fa-solid fa-microphone fa-2xl"></i></div>
+          </div>
+          
+          </div>
+          </div>
+          
+          </div>
+          
  
    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="assets/file.js"></script>
